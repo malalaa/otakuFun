@@ -26,6 +26,13 @@ def init_roles():
     db.session.commit()
     print("角色添加成功！")
 
+def init_developer():
+    role = RoleModel.query.filter_by(name="开发者").first()
+    user = UserModel(username="malala", email="1482775872@qq.com",password='111111',is_staff=True, role =role)
+    db.session.add(user)
+    db.session.commit()
+    print("开发者角色下的用户创建成功：")
+
 def bind_roles():
     user1 = UserModel.query.filter_by(email="1482775872@qq.com").first()
     user2 = UserModel.query.filter_by(email="mll@qq.com").first()
