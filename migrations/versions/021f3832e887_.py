@@ -22,7 +22,7 @@ def upgrade():
     sa.Column('id', sa.String(length=100), nullable=False),
     sa.Column('email', sa.String(length=100), nullable=False),
     sa.Column('username', sa.String(length=100), nullable=False),
-    sa.Column('_password', sa.String(length=100), nullable=False),
+    sa.Column('_password', sa.String(length=200), nullable=False),
     sa.Column('avatar', sa.String(length=100), nullable=True),
     sa.Column('signature', sa.String(length=100), nullable=True),
     sa.Column('join_time', sa.DateTime(), nullable=True),

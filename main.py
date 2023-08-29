@@ -42,7 +42,7 @@ app.cli.command("init_developer")(commands.init_developer)
 # app.cli.command("bind_roles")(commands.bind_roles)
 if __name__ == '__main__':
 
-    app.run(debug=True, host="127.0.0.1", port='5000')
+    app.run(debug=True, host="0.0.0.0", port='5000')
     commands.init_boards()
 
 
