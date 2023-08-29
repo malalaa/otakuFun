@@ -28,7 +28,7 @@ def init_roles():
 
 def init_developer():
     role = RoleModel.query.filter_by(name="开发者").first()
-    user = UserModel(username="malala", email="1482775872@qq.com",password='111111',is_staff=True, role =role)
+    user = UserModel(username="MALALA", email="malala4869@163.com",password='111111', is_staff=True, role=role)
     db.session.add(user)
     db.session.commit()
     print("开发者角色下的用户创建成功：")
